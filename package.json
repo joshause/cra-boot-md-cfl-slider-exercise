@@ -1,0 +1,29 @@
+{
+  "name": "cra-boot-md-cfl-slider-exercise",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "bootstrap": "3",
+    "contentful": "^4.6.2",
+    "gh-pages": "^1.0.0",
+    "node-sass-chokidar": "^0.0.3",
+    "npm-run-all": "^4.1.1",
+    "react-bootstrap": "^0.31.3",
+    "react-scripts": "^1.0.14"
+  },
+  "homepage": "https://joshause.github.io/cra-boot-md-cfl-slider-exercise"
+}
